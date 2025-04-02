@@ -33,7 +33,7 @@ concurrent-web-crawler/
 ### Installation
 #### Clone the Repository
 ```sh
-git clone https://github.com/PoowadolDev/Concurrent-Web-Crawler.git
+git clone https://github.com/0ritam/Concurrent-Web-Crawler.git
 cd concurrent-web-crawler
 ```
 
