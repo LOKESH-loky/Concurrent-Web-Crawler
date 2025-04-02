@@ -203,7 +203,7 @@ func serveFrontend(w http.ResponseWriter, r *http.Request) {
 		</div>
 	</div>
 	<script>
-		const ws = new WebSocket("ws://" + window.location.host + "/ws");
+		const socket = new WebSocket("wss://concurrent-web-crawler-production.up.railway.app/ws");
 		const tbody = document.querySelector("#results");
 		const progress = document.getElementById("progress");
 		const startForm = document.getElementById("startForm");
