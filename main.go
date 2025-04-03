@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 	"net/url"
+	"os"
 	"sync"
 	"time"
 
@@ -45,14 +46,20 @@ var (
 func main() {
 	log.Println("Starting Concurrent Web Crawler with Frontend")
 
+	// Get the port from the environment (for Railway) or default to 8080
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+
 	// Start HTTP server
 	go func() {
 		http.HandleFunc("/", serveFrontend)
 		http.HandleFunc("/ws", handleWebSocket)
 		http.HandleFunc("/stop", handleStop)
 		http.HandleFunc("/start", handleStart)
-		log.Println("Starting HTTP server on :8080")
-		log.Fatal(http.ListenAndServe(":8080", nil))
+		log.Println("Starting HTTP server on :" + port)
+		log.Fatal(http.ListenAndServe(":"+port, nil))
 	}()
 
 	// Keep main thread alive
@@ -199,7 +206,11 @@ func serveFrontend(w http.ResponseWriter, r *http.Request) {
 		</div>
 	</div>
 	<script>
-		const socket = new WebSocket("ws://localhost:8080/ws");
+		// Dynamically determine the WebSocket URL based on the current host
+		const wsProtocol = window.location.protocol === "https:" ? "wss:" : "ws:";
+		const wsHost = window.location.host;
+		const socket = new WebSocket(wsProtocol + "//" + wsHost + "/ws");
+
 		const tbody = document.querySelector("#results");
 		const progress = document.getElementById("progress");
 		const startForm = document.getElementById("startForm");
