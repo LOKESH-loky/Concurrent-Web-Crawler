@@ -2,11 +2,9 @@ package main
 
 import (
 	"encoding/json"
-
 	"log"
 	"net/http"
 	"net/url"
-
 	"sync"
 	"time"
 
@@ -42,8 +40,6 @@ var (
 	stopped    bool
 	stoppedMux sync.Mutex
 	crawlWG    sync.WaitGroup
-	//robotsMap  = make(map[string]*robotstxt.RobotsData)
-	//robotsMutex sync.Mutex
 )
 
 func main() {
@@ -203,12 +199,12 @@ func serveFrontend(w http.ResponseWriter, r *http.Request) {
 		</div>
 	</div>
 	<script>
-		const socket = new WebSocket("wss://concurrent-web-crawler-production.up.railway.app/ws");
+		const socket = new WebSocket("ws://localhost:8080/ws");
 		const tbody = document.querySelector("#results");
 		const progress = document.getElementById("progress");
 		const startForm = document.getElementById("startForm");
 
-		ws.onmessage = function(event) {
+		socket.onmessage = function(event) {
 			progress.textContent = "Crawling in progress...";
 			progress.classList.remove("text-red-600");
 			progress.classList.add("text-blue-600");
@@ -222,13 +218,13 @@ func serveFrontend(w http.ResponseWriter, r *http.Request) {
 			tbody.appendChild(row);
 		};
 
-		ws.onclose = function() {
+		socket.onclose = function() {
 			progress.textContent = "WebSocket connection closed.";
 			progress.classList.remove("text-blue-600");
 			progress.classList.add("text-red-600");
 		};
 
-		ws.onerror = function(error) {
+		socket.onerror = function(error) {
 			console.error("WebSocket error:", error);
 			progress.textContent = "Error connecting to WebSocket.";
 			progress.classList.remove("text-blue-600");
